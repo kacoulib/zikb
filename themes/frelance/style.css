@@ -21,6 +21,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
 /*moi*/
+body{
+	background: gray!important;
+}
 #masthead{
 	background: white;
 }
