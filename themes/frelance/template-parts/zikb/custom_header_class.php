@@ -6,8 +6,6 @@
       global $wp_query;
       $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
 
-
-
       $output .= $indent . '<li>';
 
       $attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
@@ -17,7 +15,7 @@
       if (is_front_page())
         $attributes .= ! empty( $item->url )        ? ' href="#'   . esc_attr( strtolower($item->title)        ) .'"' : '';
       else
-        $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
+        $attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( home_url().'/#'.strtolower($item->title)        ) .'"' : '';
 
       $prepend = '<strong>';
       $append = '</strong>';

@@ -1,4 +1,4 @@
-<footer>
+<footer id='contact'>
 	<div class="center">
 		<div>			
 			<h4>contact</h4>

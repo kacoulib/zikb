@@ -13,18 +13,15 @@
 				while ( $loop->have_posts() ) : $loop->the_post();
 			 	?>
 				 	<li>
-						<img src="http://emi-lee.fr/wp-content/uploads/2015/11/12.jpg" alt='my html skill logo'>
-						<figcaption>the_title</figcaption>
-					
-						</figure>
-						html <span></span>
+				 		<figure>
+			 				<a href="<?php echo implode(get_to_ping($post->ID)); ?>" target='_blank'>
+								<?php the_post_thumbnail(); ?>
+				 			</a>
+							<figcaption><?php the_title(); ?></figcaption>
+						
+				 		</figure>
 					</li>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-				<div class="entry-content">
-				<?php the_content(); ?>
-				</div>
 				<?php endwhile;?>
 			</ul>
 		</div>
 	</div>
-	<?php //var_dump($loop)?>

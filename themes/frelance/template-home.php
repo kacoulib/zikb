@@ -42,7 +42,7 @@ get_header(); ?>
 		Natexo se propose aussi d'accompagner les marques dans la conception graphique de leurs campagnes. Nos équipes créatives veillent a
 	</p>
 </section>
-<section id='skills' class='center'>
+<!-- <section id='skills' class='center'>
 	<div>
 		<h2>Skills</h2>
 		<div class="displayLeft">
@@ -125,69 +125,12 @@ get_header(); ?>
 			</ul>
 		</div>
 	</div>
-</section>
-<!-- <section id='portfolio' class='center'>
-	<div>
-		<h2>Portfolio</h2>
-		<div class="displayLeft">
-	  		<p>Les ingrédients qui vous sont proposés n’ont pas été choisis par hasard. Ils se marient parfaitement avec des nouilles de riz, des crudités et la fameuse sauce aigre douce à base de nuoc mam. Votre bobun est un caméléon que vous pouvez modifer au gré de vos appétits...</p>
-		</div>
-		<div class='displayRight'>
-			<ul class="listDisplay">
-				<li>
-					<figure>
-						<img src="http://emi-lee.fr/wp-content/uploads/2015/11/12.jpg" alt='my html skill logo'>
-						<figcaption>logo</figcaption>
-						
-					</figure>
-					html <span></span>
-				</li>
-				<li>
-					<figure>
-						<img src="http://emi-lee.fr/wp-content/uploads/2015/11/12.jpg" alt='my css skill logo'>
-						<figcaption>logo</figcaption>
-						
-					</figure>
-					css <span></span>
-				</li>
-				<li>
-					<figure>
-						<img src="http://emi-lee.fr/wp-content/uploads/2015/11/12.jpg" alt='my javascript skill logo'>
-						<figcaption>logo</figcaption>
-						
-					</figure>
-					javascript <span></span>
-				</li>
-				<li>
-					<figure>
-						<img src="http://emi-lee.fr/wp-content/uploads/2015/11/12.jpg" alt='my jquery skill logo'>
-						<figcaption>logo</figcaption>
-						
-					</figure>
-					jquery <span></span>
-				</li>
-				<li>
-					<figure>
-						<img src="http://emi-lee.fr/wp-content/uploads/2015/11/12.jpg" alt='my nodeJs skill logo'>
-						<figcaption>logo</figcaption>
-						
-					</figure>
-					nodeJs <span></span>
-				</li>
-				<li>
-					<figure>
-						<img src="http://emi-lee.fr/wp-content/uploads/2015/11/12.jpg" alt='my skill logo'>
-						<figcaption>logo</figcaption>
-						
-					</figure>
-					nodeJs <span></span>
-				</li>
-			</ul>
-		</div>
-	</div>
 </section> -->
+<section id='skills' class='center'>
+	<?php get_template_part('/template-parts/zikb/skills');?>
+</section>
 <section id='portfolio' class='center'>
-	<?php get_template_part('portfolio');?>
+	<?php get_template_part('/template-parts/zikb/portfolios');?>
 </section>
 <section id='tutorials' class='center'>
 	<div>
@@ -195,58 +138,7 @@ get_header(); ?>
 		<div class="displayLeft">
 	  		<p>Les ingrédients qui vous sont proposés n’ont pas été choisis par hasard. Ils se marient parfaitement avec des nouilles de riz, des crudités et la fameuse sauce aigre douce à base de nuoc mam. Votre bobun est un caméléon que vous pouvez modifer au gré de vos appétits...</p>
 		</div>
-		<div class='displayRight'>
-			<ul class="listDisplay">
-				<li>
-					<figure>
-						<img src="http://emi-lee.fr/wp-content/uploads/2015/11/12.jpg" alt='my html skill logo'>
-						<figcaption>logo</figcaption>
-						
-					</figure>
-					html <span></span>
-				</li>
-				<li>
-					<figure>
-						<img src="http://emi-lee.fr/wp-content/uploads/2015/11/12.jpg" alt='my css skill logo'>
-						<figcaption>logo</figcaption>
-						
-					</figure>
-					css <span></span>
-				</li>
-				<li>
-					<figure>
-						<img src="http://emi-lee.fr/wp-content/uploads/2015/11/12.jpg" alt='my javascript skill logo'>
-						<figcaption>logo</figcaption>
-						
-					</figure>
-					javascript <span></span>
-				</li>
-				<li>
-					<figure>
-						<img src="http://emi-lee.fr/wp-content/uploads/2015/11/12.jpg" alt='my jquery skill logo'>
-						<figcaption>logo</figcaption>
-						
-					</figure>
-					jquery <span></span>
-				</li>
-				<li>
-					<figure>
-						<img src="http://emi-lee.fr/wp-content/uploads/2015/11/12.jpg" alt='my nodeJs skill logo'>
-						<figcaption>logo</figcaption>
-						
-					</figure>
-					nodeJs <span></span>
-				</li>
-				<li>
-					<figure>
-						<img src="http://emi-lee.fr/wp-content/uploads/2015/11/12.jpg" alt='my skill logo'>
-						<figcaption>logo</figcaption>
-						
-					</figure>
-					nodeJs <span></span>
-				</li>
-			</ul>
-		</div>
+		<?php get_template_part('content'); ?>
 	</div>
 </section>
 <?php get_footer(); ?>
