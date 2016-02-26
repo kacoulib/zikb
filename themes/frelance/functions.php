@@ -150,3 +150,6 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+require get_template_directory() . '/inc/cpt/skills.php';
+require get_template_directory() . '/inc/cpt/portfolios.php';
+require get_template_directory() . '/template-parts/zikb/custom_header_class.php';

@@ -1,3 +1,4 @@
+	<span id='scrollToTop'></span>
 	<script type="text/javascript">
 		(function (){
 			var burger = document.getElementById('burger'),
@@ -37,8 +38,7 @@
 				}
 			});
 		})(document.readyState || window.onload)
-
-
+		console.log($('body'))
 	</script>
 	</body>
 </html>
