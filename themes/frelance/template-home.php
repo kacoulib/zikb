@@ -6,7 +6,7 @@ get_header(); ?>
 
 <section id='home'>
 	<div class='center'>
-		
+		<h1>web developer</h1>
 	</div>
 </section>
 <section id='about' class='center'>
@@ -17,7 +17,8 @@ get_header(); ?>
 		</figure>
 		<div class='displayRight'>
 			<p>
-				Installé au cœur du 10e arrondissement de Paris, à deux pas du métro Poissonnière et de ses artères commerçantes, le restaurant vous ouvre ses portes chaque jour de 11H30 à 15h du lundi au vendredi sur place et à emporter. </p>
+				Installé au cœur du 10e arrondissement de Paris, à deux pas du métro Poissonnière et de ses artères commerçantes, le restaurant vous ouvre ses portes chaque jour de 11H30 à 15h du lundi au vendredi sur place et à emporter.
+			</p>
 			<p>
 				EMI-LEE se veut à la croisée des cultures : tabourets et tables en bois, murs décorés de photographies venues du Vietnam datant des années 50, et une ambiance  musicale soul, jazz et autre style, pour accompagner votre pause déjeuner. Le restaurant vous accueille dans une ambiance authentique où les plats peuvent aussi être commandés puis dégustés à emporter. 
 			</p>
@@ -138,7 +139,25 @@ get_header(); ?>
 		<div class="displayLeft">
 	  		<p>Les ingrédients qui vous sont proposés n’ont pas été choisis par hasard. Ils se marient parfaitement avec des nouilles de riz, des crudités et la fameuse sauce aigre douce à base de nuoc mam. Votre bobun est un caméléon que vous pouvez modifer au gré de vos appétits...</p>
 		</div>
-		<?php get_template_part('content'); ?>
+		<div class='displayRight'>
+			<ul class="listDisplay">
+				<?php
+				    $recentPosts = new WP_Query();
+				    $recentPosts->query('showposts=6');
+				?>
+				<?php while ($recentPosts->have_posts()) : $recentPosts->the_post(); ?>
+				    <li>
+				    	<a href="<?php the_permalink() ?>" rel="bookmark">
+				    	<figure>
+							<img src="http://emi-lee.fr/wp-content/uploads/2015/11/12.jpg" alt='my jquery skill logo'>
+							<figcaption><?php the_title(); ?></figcaption>
+							
+						</figure>
+						<span>category :</span> <?php the_category(); ?>
+					    </a>
+				    </li>
+				<?php endwhile; ?>
+				</ul>
 	</div>
 </section>
 <?php get_footer(); ?>

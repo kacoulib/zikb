@@ -54,7 +54,6 @@ table {
 body{
 	margin: 0 0;
 }
-
 body>header{
 	position: fixed;
 	top: 0;
@@ -89,7 +88,7 @@ body header div nav ul li a{
 	text-decoration: none;
 }
 							/*content*/
-section{
+#wrapper, section{
 	min-height: 100vh;
 	margin-top: 3em; 
 	padding-top: 5em; 
@@ -98,6 +97,11 @@ section#home{
 	position: relative;
 	background: url(http://emi-lee.fr/wp-content/uploads/2015/11/yo6.jpg) no-repeat fixed;
 	background-size: cover;
+}
+section#home h1{
+	margin-top: 1em;
+	font-size: 12em;
+	text-align: center;
 }
 section#home:after{
 	content: "alert";
@@ -175,16 +179,22 @@ ul>li{
 	height: 32%;
 }
 h1, h2, h3, h4, h5{
+	display: block;
+	width: 100%;
 	color: #DD3333;
+}
+h1{
+	text-align: center;
+	font-size: 2em;
 }
 ul{
 	margin: 0;
 	padding: 0;
 }
 h2{
+	text-align: center;
 	margin: 2em auto;
 	font-size: 3em;
-	width: 2em;
 }
 p{
 	font-size: 16px;
@@ -209,6 +219,11 @@ img{
 .twitter{
 	background-image: url('assets/imgs/icons/twitter.png'); 
 }
+							/*post*/
+article .post-content{
+/*	float: right;*/
+}
+
 							/*responsive*/
 @media (max-width: 960px)
 {
@@ -245,6 +260,11 @@ img{
 }
 
 @media (max-width: 750px){
+	html, body{
+		margin: 0 0;
+		padding: 0 0;
+		overflow-x: hidden; 
+	}
 	.displayLeft, .displayRight{
 		display: block;
 		width: 90%;

@@ -9,39 +9,29 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<article>
+	<header>
 		<?php
 			if ( is_single() ) {
-				the_title( '<h1 class="entry-title">', '</h1>' );
+				the_title( '<h1>', '</h1>' );
 			} else {
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				the_title( '<h2><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			}
 
 		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php frelance_posted_on(); ?>
-		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
-	</header><!-- .entry-header -->
+	</header>
 
-	<div class="entry-content">
+	<div class="post-content center">
 		<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'frelance' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
+			the_content();
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'frelance' ),
-				'after'  => '</div>',
-			) );
-		?>
+			$mtb = get_post_meta($post->ID,'youtube_post_link',true);
+			if (!empty($mtb)){
+				$mtb = explode('=', $mtb);
+				echo '<aside><iframe width="560" height="315" src="https://www.youtube.com/embed/'.$mtb[1].'" frameborder="0" allowfullscreen></iframe></aside>';	
+			} 
+			?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php frelance_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
