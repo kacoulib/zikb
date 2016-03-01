@@ -15,8 +15,8 @@ function youtube_linker($post){
 	$s = explode('=', $s);
 	$val = (isset($s[1])? $s[1] : $s[0]);
 	if (!empty($data))
-		$html .= '<iframe width="560" height="315" src="https://www.youtube.com/embed/'.$val.'" frameborder="0" allowfullscreen></iframe>';
-	$html .= '<input type="text" name="youtube_post_link" value="'.$data.'" placeholder="add a youtube video link"/>';
+		$html .= '<iframe width="560" height="315" src="https://www.youtube.com/embed/'.$val.'" frameborder="0" allowfullscreen style="width: 100%;"></iframe>';
+	$html .= '<input type="text" style="width: 90%;" name="youtube_post_link" value="'.$data.'" placeholder="add a youtube video link"/>';
 	$html .= '<input type="submit" value="add"/>';
 	echo $html;
 }

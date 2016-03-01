@@ -4,6 +4,7 @@ $(document).ready(function(){
 	$(window).scroll(function(){
 		top = $(this).scrollTop();
 		if (top <= Wheight)
-			$('#home').css('background-position-y', -(top/8));			
+			$('#home').css('background-position-y', -(top/8));
+		console.log(top);
 	});
 });
