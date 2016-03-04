@@ -8,6 +8,8 @@ get_header(); ?>
 	<div class='center'>
 		<h1>web developer</h1>
 	</div>
+	<span class='toTop' id = 'headerToTop'></span>
+
 </section>
 <section id='about' class='center'>
 	<div>

@@ -87,12 +87,17 @@ section#home h1{
 	font-size: 12em;
 	text-align: center;
 }
-section#home:after{
-	content: "alert";
+#headerToTop{
+	position: inherit;
 	position: absolute;
 	bottom: 2em;
 	left: 50%;
 	z-index: 9;
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
 }
 
 
@@ -109,6 +114,23 @@ footer ul{ text-align: center; }
 footer ul li:first-child{ margin-left: 0em; }
 footer ul li{ margin-left: 4em; }
 footer ul li a span{ vertical-align: middle; }
+.toTop{
+	position: fixed;
+	right: 1em;
+	bottom: 2em;
+	width: 48px;
+	height: 48px;
+	background: url('assets/imgs/icons/toTop.png') no-repeat;
+	background-size: 100%;
+	transition: background-size .2s ease-in .5s;
+	cursor: pointer;
+}
+.toTop:hover{
+	right: 1.3em;
+	bottom: 2.3em;
+	background-size: 125%;
+	transition: all .2s;
+}
 
 							/*other*/
 ul{
@@ -146,6 +168,8 @@ ul>li{ display: inline-block; }
 .listDisplay li img{
 	overflow: hidden;
 	height: 32%;
+	max-width: 245px;
+	max-height: 245px;
 }
 h1, h2, h3, h4, h5{
 	display: block;

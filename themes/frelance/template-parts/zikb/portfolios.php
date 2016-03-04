@@ -14,7 +14,7 @@
 			 	?>
 				 	<li>
 				 		<figure>
-			 				<a href="<?php echo implode(get_to_ping($post->ID)); ?>" target='_blank'>
+			 				<a href="<?php echo $post->pinged; ?>" target='_blank'>
 								<?php the_post_thumbnail(); ?>
 				 			</a>
 							<figcaption><?php the_title(); ?></figcaption>

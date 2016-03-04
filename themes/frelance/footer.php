@@ -8,6 +8,7 @@
 			</ul>
 		</div>
 	</div><!-- #page -->
+	<span class='toTop' data-poz='footer'></span>
 </footer><!-- #colophon -->
 
 <?php wp_footer(); ?>
